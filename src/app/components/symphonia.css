@@ -225,8 +225,8 @@
     }
 
     .header-2 {
-        width: 85%;
-        padding: 0 1rem;
+        width: 50%;
+        padding: 0 0.5rem;
     }
 
     .header-2 h2 {
@@ -303,7 +303,7 @@
     }
 
     .header-2 {
-        width: 90%;
+        width: 45%;
     }
 
     .header-2 h2 {
@@ -332,8 +332,8 @@
     }
 
     .header-2 {
-        width: 92%;
-        padding: 0 0.5rem;
+        width: 40%;
+        padding: 0 0.25rem;
     }
 
     .header-2 h2 {
@@ -408,7 +408,7 @@
     }
 
     .header-2 {
-        width: 95%;
+        width: 35%;
     }
 
     .header-2 h2 {
