@@ -1,0 +1,293 @@
+/* Main Container */
+.task-container {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    position: relative;
+    overflow-x: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #000;
+}
+
+/* Header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    width: 28px;
+    height: 36px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-text span {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+.schedule-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 0.875rem 1.75rem;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.schedule-btn:hover {
+    background-color: #333;
+}
+
+/* Fixed Side Elements */
+.side-tab {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 40;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1rem;
+}
+
+.tab-initial {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+.tab-text {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-transform: uppercase;
+}
+
+.side-indicator {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 40;
+}
+
+.indicator-bar {
+    width: 6px;
+    height: 7rem;
+    background-color: #000;
+}
+
+/* Main Content */
+.main-content {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.content-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.hero-title {
+    flex: 1;
+}
+
+.hero-title h1 {
+    font-size: clamp(6rem, 12vw, 10rem);
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.hero-line {
+    display: block;
+}
+
+.hero-subtext {
+    text-align: right;
+    padding-right: 5rem;
+    /* Aligns exactly with the 3rd line of text ("& DIGITAL") */
+    margin-top: 18.5vw;
+}
+
+.subtext-content {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    line-height: 1.8;
+}
+
+/* Work Seen On Section */
+.work-section {
+    margin-top: 14rem;
+}
+
+.work-header {
+    text-center: center;
+    margin-bottom: 2.5rem;
+}
+
+.work-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.logos-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.filt-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.filt-box {
+    border: 2.5px solid #000;
+    padding: 0.6rem 1rem;
+}
+
+.filt-text {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.filt-sub {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+}
+
+.yahoo-logo {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -0.02em;
+}
+
+.purple-accent {
+    color: #6001D2;
+}
+
+.f3-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.f3-box {
+    border: 2.5px solid #000;
+    padding: 0.75rem 2rem;
+}
+
+.f3-text {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1;
+}
+
+.f3-sub {
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+}
+
+.awwwards-logo {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .header {
+        padding: 1.5rem;
+    }
+
+    .main-content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .hero-subtext {
+        display: none;
+        /* Hide on smaller screens or adjust layout */
+    }
+
+    .logos-container {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
