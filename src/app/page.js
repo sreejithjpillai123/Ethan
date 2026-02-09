@@ -572,31 +572,23 @@ export default function TaskPage() {
 
                             {/* HUNTER YEANY */}
                             <motion.div className={styles.logoHunter} variants={fadeInUp}>
-                                <div className={styles.hunterIcon}>H</div>
-                                <div className={styles.hunterText}>
-                                    <span>HUNTER</span>
-                                    <span>YEANY</span>
-                                </div>
+                                <div><img src="images/hunter.png" /></div>
                             </motion.div>
 
                             {/* nuu */}
                             <motion.div className={styles.logoNuu} variants={fadeInUp}>nuu</motion.div>
 
                             {/* yahoo! */}
-                            <motion.div className={styles.yahooLogo} variants={fadeInUp}>yahoo<span style={{ color: '#6001d2' }}>!</span></motion.div>
+                            <motion.div className={styles.yahooLogo} variants={fadeInUp}><div><img src="images/yahoo.png" /></div></motion.div>
 
                             {/* Houston Exponential */}
                             <motion.div className={styles.logoHouston} variants={fadeInUp}>
-                                <div className={styles.houstonIcon}>✖</div>
-                                <div className={styles.houstonText}>
-                                    <div>Houston</div>
-                                    <div>Exponential</div>
-                                </div>
+                                <div><img src="images/houston.png" /></div>
                             </motion.div>
 
                             {/* NAMI */}
                             <motion.div className={styles.logoNami} variants={fadeInUp}>
-                                NAMI<span className={styles.namiTrade}>®</span>
+                                <img src="images/name.png" />
                             </motion.div>
                         </motion.div>
                     </div>
