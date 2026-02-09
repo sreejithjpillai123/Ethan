@@ -1033,7 +1033,9 @@
 .awardsSection {
     margin-top: 5rem;
     padding-bottom: 10rem;
-    width: 100%;
+    width: 100vw;
+    margin-left: -3rem;
+    margin-right: -3rem;
     overflow: hidden;
 }
 
