@@ -114,13 +114,7 @@ export default function TaskPage() {
                         <div className={styles.logosContainer}>
                             {/* FLUX ACADEMY Logo */}
                             <div className={styles.fluxWrapper}>
-                                <div className={styles.fluxBox}>
-                                    <span>F</span>
-                                    <span>L</span>
-                                    <span>U</span>
-                                    <span>X</span>
-                                </div>
-                                <div className={styles.fluxSub}>ACADEMY</div>
+                                <div><img src="images/F.png" /></div>
                             </div>
 
                             {/* Yahoo Logo */}

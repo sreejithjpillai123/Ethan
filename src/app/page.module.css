@@ -473,9 +473,10 @@
 
 .aboutGrid {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1700px;
+
     margin: 0 auto;
-    padding: 0 4rem;
+    padding: 0 6rem;
     display: flex;
     justify-content: flex-end;
 }
