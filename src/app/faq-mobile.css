@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+    .faqSection {
+        padding-right: 2rem;
+        padding-bottom: 5rem;
+    }
+
+    .faqContainer {
+        width: 60%;
+        max-width: none;
+    }
+
+    .faqQuestion {
+        font-size: 8px;
+        line-height: 1.4;
+        letter-spacing: 0;
+    }
+
+    .faqIcon {
+        font-size: 12px;
+    }
+
+    .faqItem {
+        padding: 0.5rem 0;
+    }
+}

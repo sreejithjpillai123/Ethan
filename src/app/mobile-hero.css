@@ -1,0 +1,32 @@
+/* Mobile 425px Hero Section Styles @media (max-width: 425px) {
+    .heroSection {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-right: 0;
+        margin-top: 3rem;
+    }
+
+    .heroTitle h1 {
+        font-size: 40px;
+        line-height: 0.95;
+        text-align: center;
+    }
+
+    .heroLineWithSub {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .subtextInline {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .subtextInline div {
+        font-size: 8px;
+        line-height: 1.2;
+    }
+} */
