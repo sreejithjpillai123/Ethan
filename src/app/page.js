@@ -1,5 +1,5 @@
 "use client";
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import styles from './page.module.css';
 
@@ -22,8 +22,25 @@ const staggerContainer = {
     }
 };
 
+
+
+const faqs = [
+    { q: "DO YOU DO WEB DESIGN OR WEB DEVELOPMENT?", a: "We offer both web design and web development services." },
+    { q: "I'M AN AGENCY, DO YOU DEVELOP FIGMA DESIGNS?", a: "Yes, we specialize in converting Figma designs to Webflow or custom code." },
+    { q: "WHY DO I DEVELOP SOLELY USING WEBFLOW?", a: "Webflow allows for rapid development, clean code, and easy client management." },
+    { q: "HOW MUCH DOES IT COST?", a: "Costs vary depending on project complexity. Contact us for a quote." },
+    { q: "IS THERE ANY EXTRA COST INVOLVED?", a: "We provide upfront pricing with no hidden fees." },
+    { q: "HOW LONG DOES IT TAKE?", a: "Timelines depend on the project scope, typically ranging from 2-4 weeks." },
+    { q: "DO I NEED A DEVELOPER TO MAKE FUTURE UPDATES ON MY WEBSITE?", a: "No, Webflow Editor makes it easy for you to update content yourself." }
+];
+
 export default function TaskPage() {
     const [activeNav, setActiveNav] = useState('SCHEDULE A CALL');
+    const [openFaqIndex, setOpenFaqIndex] = useState(null);
+
+    const toggleFaq = (index) => {
+        setOpenFaqIndex(openFaqIndex === index ? null : index);
+    };
 
     return (
         <div className={styles.container}>
@@ -623,47 +640,37 @@ export default function TaskPage() {
                             viewport={{ once: true, margin: "-50px" }}
                             variants={staggerContainer}
                         >
-                            {/* Q1 */}
-                            <motion.div className={styles.faqItem} variants={fadeInUp}>
-                                <div className={styles.faqQuestion}>DO YOU DO WEB DESIGN OR WEB DEVELOPMENT?</div>
-                                <div className={styles.faqIcon}>+</div>
-                            </motion.div>
+                            {faqs.map((faq, index) => (
+                                <motion.div
+                                    className={styles.faqItem}
+                                    variants={fadeInUp}
+                                    key={index}
+                                >
+                                    <div
+                                        className={styles.faqHeader}
+                                        onClick={() => toggleFaq(index)}
+                                    >
+                                        <div className={styles.faqQuestion}>
+                                            {faq.q}
+                                        </div>
+                                        <div className={styles.faqIcon}>
+                                            {openFaqIndex === index ? '-' : '+'}
+                                        </div>
+                                    </div>
 
-                            {/* Q2 */}
-                            <motion.div className={styles.faqItem} variants={fadeInUp}>
-                                <div className={styles.faqQuestion}>I'M AN AGENCY, DO YOU DEVELOP FIGMA DESIGNS?</div>
-                                <div className={styles.faqIcon}>+</div>
-                            </motion.div>
-
-                            {/* Q3 */}
-                            <motion.div className={styles.faqItem} variants={fadeInUp}>
-                                <div className={styles.faqQuestion}>WHY DO I DEVELOP SOLELY USING WEBFLOW?</div>
-                                <div className={styles.faqIcon}>+</div>
-                            </motion.div>
-
-                            {/* Q4 */}
-                            <motion.div className={styles.faqItem} variants={fadeInUp}>
-                                <div className={styles.faqQuestion}>HOW MUCH DOES IT COST?</div>
-                                <div className={styles.faqIcon}>+</div>
-                            </motion.div>
-
-                            {/* Q5 */}
-                            <motion.div className={styles.faqItem} variants={fadeInUp}>
-                                <div className={styles.faqQuestion}>IS THERE ANY EXTRA COST INVOLVED?</div>
-                                <div className={styles.faqIcon}>+</div>
-                            </motion.div>
-
-                            {/* Q6 */}
-                            <motion.div className={styles.faqItem} variants={fadeInUp}>
-                                <div className={styles.faqQuestion}>HOW LONG DOES IT TAKE?</div>
-                                <div className={styles.faqIcon}>+</div>
-                            </motion.div>
-
-                            {/* Q7 */}
-                            <motion.div className={styles.faqItem} variants={fadeInUp}>
-                                <div className={styles.faqQuestion}>DO I NEED A DEVELOPER TO MAKE FUTURE UPDATES ON MY WEBSITE?</div>
-                                <div className={styles.faqIcon}>+</div>
-                            </motion.div>
+                                    {openFaqIndex === index && (
+                                        <motion.div
+                                            className={styles.faqAnswer}
+                                            initial={{ opacity: 0, height: 0 }}
+                                            animate={{ opacity: 1, height: "auto" }}
+                                            exit={{ opacity: 0, height: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                        >
+                                            {faq.a}
+                                        </motion.div>
+                                    )}
+                                </motion.div>
+                            ))}
                         </motion.div>
                     </div>
                 </div>
